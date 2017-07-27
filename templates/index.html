@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block main %}
+    {% for article in article_list %}
+       <article class="article article-{{article.pk}}">
+          <div><a href="{% url 'detail' article.pk %}" style="font-size:20px;font-family:微软雅黑">{{ article.caption }}</a></div>
+              <div class="clr"></div>
+              <p style="font-size:15px;color:#21a6ff;font-family:微软雅黑">{{ article.author }} /<span style="font-size:15px;color:black">著&nbsp;&nbsp;&nbsp;&nbsp;浏览量：</span>{{ article.views }}</p>
+              <div class="clr"></div>
+              <p style="font-size:15px;color:#333300;font-family:微软雅黑">{{ article.abstract|safe }}</p>
+              <h1 style="font-size:15px;color:black"><a href="{% url 'detail' article.pk %}"style="font-size:15px;color:#21a6ff;font-family:黑体">继续阅读</a></h1>
+       </article>
+    {% endfor %}
+{% endblock main %}
+
