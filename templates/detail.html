@@ -5,8 +5,8 @@
       <p style="font-size:15px;color:#21a6ff;font-family:微软雅黑">{{ article.author }} /<span style="font-size:15px;color:black">著&nbsp;&nbsp;&nbsp;&nbsp;浏览量：</span>{{ article.views }}</p>
       <p>{{ article.body|safe }}</p>
    </article>
-   {% load threadedcomments_tags %}
-    <h2>来来来，吐个象牙吧</h2>
-    {% render_comment_list for article %}
-    {% render_comment_form for article %}
+<!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2140525"></script>
+<!-- UY END -->
 {% endblock main %}

@@ -25,13 +25,11 @@ admin.autodiscover()
 urlpatterns = [
    url(r'^admin/', include(admin.site.urls)),
    url(r'', include('easyblog.urls')),
+   url(r'^$', views.index, name='index'),
    url(r'index/$', views.index, name='index'),
    url(r'^index/article/(?P<pk>\d+)/$', views.detail, name='detail'),
    url(r'^article/comments/',include('django_comments.urls')),
    url(r'^category/(?P<pk>[0-9]+)/$', views.CategoryView.as_view(), name='category'),
-   url(r'^blog/$',views.blog,name='blog'),
-   url(r'^about/$', views.about, name='about'),
    url(r'contact/$', views.contact, name='contact'),
-   url(r'support/$', views.support, name='support'),
    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
    ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
