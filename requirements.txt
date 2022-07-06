@@ -23,7 +23,7 @@ django-threadedcomments==1.1
 Fabric==1.13.2
 future==0.16.0
 haystack==0.42
-html5lib==0.9999999
+html5lib==0.999999999
 HTMLParser==0.0.2
 idna==2.5
 image==1.5.5
